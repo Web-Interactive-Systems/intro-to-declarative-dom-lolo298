@@ -1,5 +1,6 @@
 import { createElement, render } from './mini';
-
+const containerId = 'app';
+const container = document.getElementById(containerId);
 /**
   vite, the build system we use for this app, supports jsx
   https://vitejs.dev/guide/features.html#jsx
@@ -66,9 +67,11 @@ import { createElement, render } from './mini';
 
 */
 
-/** @jsx Todo */
+/** @jsx createElement */
 const component = (
   <div class='container'>
     <span>Hello World!</span>
   </div>
 );
+
+render(component, container);
